@@ -17,9 +17,9 @@ E um projeto onde você pode escolher tipos de musica a sua escolha, de rock ate
 - Varios estilos de muicas
 
 
-## Documentação
+## Documentação Novo apredizado
 
-[Documentação](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration)
+[Documentação](imagens/teste.png)
 
 Em JavaScript, o for é uma estrutura de controle de fluxo utilizada para iterar sobre uma sequência de elementos, como os elementos de um array. Ele permite executar um bloco de código repetidamente enquanto uma condição específica for verdadeira.
 ## Aprendizados
