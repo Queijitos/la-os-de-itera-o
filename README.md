@@ -6,7 +6,7 @@ E um projeto onde você pode escolher tipos de musica a sua escolha, de rock ate
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](imagens/normal.jpeg)
 
 
 ## Funcionalidades
