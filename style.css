@@ -1,9 +1,210 @@
 .container{
     text-align: center;
+    padding: 50px;
 }
 .container label{
     color: aliceblue;
+    width: 10px;
 }
 body{
-    background-color: rgb(151, 17, 17);
+    background: linear-gradient(to bottom right, #5a0505,rgb(163, 37, 37) ,#ce0b0b);
+}
+#tipoMusica{
+    height: 150px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.imagens{
+    padding: 20px;
+}
+.msc{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding: 20px;
+}
+.p{
+    
+}
+button {
+    position: relative;
+    padding: 15px 45px;
+    background: #ff3131;
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    cursor: pointer;
+    border: 1px solid #095f22;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+    transition: 0.2s;
+    left: 500px;
+    align-items: center;
+  }
+ 
+  button:hover {
+    border: 1px solid #000000;
+    transition: 0.2s;
+    transform: 0.2s;
+    background: linear-gradient(
+      85deg,
+      #db0a0a,
+      #f09656,
+      #f09656,
+      #f09656,
+      #db0a0a
+    );
+    animation: wind 2s ease-in-out infinite;
+  }
+ 
+  @keyframes wind {
+    0% {
+      background-position: 0% 50%;
+    }
+ 
+    0% {
+      background-position: 50% 100%;
+    }
+ 
+    0% {
+      background-position: 0% 50%;
+    }
+  }
+ 
+  .icon-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    transform-origin: 0 0;
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+  }
+ 
+  button:hover .icon-1 {
+    animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
+    transform: rotate(10deg);
+  }
+ 
+  @keyframes slay-1 {
+    0% {
+      transform: rotate(10deg);
+    }
+ 
+    50% {
+      transform: rotate(-5deg);
+    }
+ 
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+ 
+  .icon-2 {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 12px;
+    transform-origin: 50% 0;
+    transform: rotate(10deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  }
+ 
+  button:hover .icon-2 {
+    animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+    transform: rotate(0);
+  }
+ 
+  @keyframes slay-2 {
+    0% {
+      transform: rotate(0deg);
+    }
+ 
+    50% {
+      transform: rotate(15deg);
+    }
+ 
+    100% {
+      transform: rotate(0);
+    }
+  }
+ 
+  .icon-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    transform-origin: 50% 0;
+    transform: rotate(-5deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  }
+ 
+  button:hover .icon-3 {
+    animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+    transform: rotate(0);
+  }
+ 
+  @keyframes slay-3 {
+    0% {
+      transform: rotate(0deg);
+    }
+ 
+    50% {
+      transform: rotate(-5deg);
+    }
+ 
+    100% {
+      transform: rotate(0);
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+ 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+ 
+.music-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+ 
+.music-card {
+    background-color: rgb(223, 79, 79);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+}
+ 
+.music-card h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+ 
+audio {
+    width: 100%;
+}
+img{
+    width: 300px;
+    height: max-content;
+    padding: 0 auto;
+
 }
