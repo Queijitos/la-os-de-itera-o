@@ -12,31 +12,24 @@
     
 </body>
 </html>
-<div class="container">
-<form class="musica" name="selectForm">
-    <p>
-    <div>
-      <label for="tipoMusica">Escolha alguns tipos de música, em seguida, clique no botão
-        abaixo:</label>
-    </div>
-    <div class="musicas">
-      <select id="tipoMusica" name="tipoMusica" multiple="multiple">
-        <option selected="selected">R&B</option>
-        <option>Jazz</option>
-        <option>Blues</option>
-        <option>New Age</option>
-        <option>classico</option>
-        <option>sertanejo</option>
-        <option>Rock</option>
-        <option>eletronica</option>
-        <option>Ópera</option>
-    </select>
-     </div>
-    </p>
-  
+<div class="form-container">
+  <form class="musica" name="selectForm">
+      <div class="form-group">
+          <label for="tipoMusica">Escolha alguns tipos de música, em seguida, clique no botão abaixo:</label>
+          <select id="tipoMusica" name="tipoMusica" multiple="multiple">
+              <option selected="selected">Eletronica</option>
+              <option>Classico</option>
+              <option>Jazz</option>
+              <option>New Age</option>
+              <option>Ópera</option>
+              <option>R&B</option>
+              <option>Rock</option>
+              <option>Sertanejo</option>
+          </select>
+      </div>
   </form>
-  
-  <h1 style="color: aliceblue;">Veja seus estilos</h1>
+</div>
+  <h1 style="color: aliceblue; position: relative; text-align: center;" >Veja seus estilos</h1>
 </header>
 <main>
 <div class="music-container">
@@ -44,7 +37,7 @@
   <img src="imagens/eletro.jpg" alt="">
 <h2>eletronica</h2>
 <audio controls>
-<source src="musica1.mp3" type="audio/mpeg">
+<source src="musicas/Música com grave forte Eletrônica GRAVE by Giovani CDs.mp4" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div>
@@ -52,7 +45,7 @@
   <img src="imagens/classico.jpg" alt="">
 <h2>classico</h2>
 <audio controls>
-<source src="musica2.mp3" type="audio/mpeg">
+<source src="musicas/03 - Madonna - Like A Virgin.mp3" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div>
@@ -60,14 +53,14 @@
   <img src="imagens/jazz.png" alt="">
 <h2>Jazz</h2>
 <audio controls>
-<source src="musica2.mp3" type="audio/mpeg">
+<source src="musicas/Just the Two of Us -feat. Bill Withers-.mp4" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div><div class="music-card">
   <img src="imagens/new-age.png" alt="">
 <h2>New Age</h2>
 <audio controls>
-<source src="musica2.mp3" type="audio/mpeg">
+<source src="musicas/TRXVELER - TREINAMENTO DE FORÇA.mp3" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div>
@@ -75,14 +68,14 @@
   <img src="imagens/opera.jpg" alt="">
 <h2>Opêra</h2>
 <audio controls>
-<source src="musica2.mp3" type="audio/mpeg">
+<source src="musicas/The Phantom of the Opera - Prague Cello Quartet -Official video-.mp4" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div><div class="music-card">
   <img src="imagens/r&b.png" alt="">
 <h2>R&B</h2>
 <audio controls>
-<source src="musica2.mp3" type="audio/mpeg">
+<source src="musicas/James Brown - Its A Mans Mans Mans World.mp4" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div>
@@ -90,7 +83,7 @@
   <img src="imagens/R.jpg" alt="">
 <h2>Italiana</h2>
 <audio controls>
-<source src="musica2.mp3" type="audio/mpeg">
+<source src="musicas/Camille - Le Festin -Tradução - Legendado-.mp4" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div>
@@ -98,7 +91,7 @@
   <img src="imagens/rock.jpg" alt="">
 <h2>Rock</h2>
 <audio controls>
-<source src="musica2.mp3" type="audio/mpeg">
+<source src="musicas/ACDC - Back In Black -Official 4K Video-.mp4" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div>
@@ -106,7 +99,7 @@
   <img src="imagens/sertanejo.jpg" alt="">
 <h2>Sertanejo</h2>
 <audio controls>
-<source src="musica2.mp3" type="audio/mpeg">
+<source src="musicas/Luan Pereira ft. -GustavoMioto - Moletom -Oficial-.mp4" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
 </audio>
 </div>
@@ -178,22 +171,31 @@
 
 
 <script>
-    function howMany(selectObject) {
-    var numeroSelecionadas = 0;
-    for (var i = 0; i < selectObject.options.length; i++) {
-      if (selectObject.options[i].selected) {
-        numeroSelecionadas++;
-      }
-    }
-    return numeroSelecionadas;
-  }
+   // script.js
 
-  var btn = document.getElementById("btn");
-  btn.addEventListener("click", function () {
-    alert(
-      "Total de opções selecionadas: " +
-        howMany(document.selectForm.tipoMusica),
-    );
-  });
+function getSelectedOptions(selectObject) {
+    var selectedOptions = [];
+    for (var i = 0; i < selectObject.options.length; i++) {
+        if (selectObject.options[i].selected) {
+            selectedOptions.push(selectObject.options[i].text);
+        }
+    }
+    return selectedOptions;
+}
+
+document.getElementById("btn").addEventListener("click", function () {
+    var selectElement = document.selectForm.tipoMusica;
+    var selectedOptions = getSelectedOptions(selectElement);
+    
+    if (selectedOptions.length > 0) {
+        alert("Você selecionou: " + selectedOptions.join(", "));
+    } else {
+        alert("Nenhuma opção selecionada.");
+    }
+    
+    // Também exibe as seleções em um div na página
+    document.getElementById("selecoes").innerText = "Você selecionou: " + selectedOptions.join(", ");
+});
+
   </script>
   
