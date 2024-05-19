@@ -2,7 +2,7 @@
 
 # Site de escolhas de musica
 
-E um projeto onde você pode escolher tipos de musica a sua escolha, de rock ate classica, ainda em andamento e possiveis melhoras
+E um projeto onde você pode escolher tipos de musica a sua escolha, de rock ate classica, ainda em andamento e possiveis melhoras, agora podendo ouvir antes os estilos que você escolher. e podendo fazer uma lista dos quais você gostou
 
 ## Screenshots
 
@@ -32,7 +32,9 @@ Em JavaScript, o for é uma estrutura de controle de fluxo utilizada para iterar
 * for
 * while
 * var
-* select
+* .lenght
+* .join
+  
 
 
 ## Autores
